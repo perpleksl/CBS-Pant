@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="dk">
 <head>
     <meta charset="UTF-8">
     <title>CBS Pant</title>
@@ -19,7 +19,10 @@
         <label>Brugernavn:</label>
         <input type="text" name="brugernavn" id="brugernavn" value="" placeholder="CBS-brugernavn"/>
         <label>Kodeord:</label>
-        <input type="text" name="kodeord" id="kodeord" value="" placeholder="CBS-kodeord"/>
+        <input type="password" name="kodeord" id="kodeord" value="" placeholder="CBS-kodeord"/>
+        <input type="checkbox" onclick="gemKodeord()">Vis kodeord
+        <br/>
+        <br/>
         <input type="button" value="Log ind" id="login" onclick="validate()"/>
 
     </form>

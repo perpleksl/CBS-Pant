@@ -23,3 +23,16 @@ function validate(){
         }
     }
 }
+/* Nu vil vi lave funktionen "gemKodeord", der bliver aktiveret, når man trykker på checkboksen.
+Dermed siger vi, at "if" kodeordets type er et 'password', så skal det laves om til typen 'text'. "else" vil kodeordet
+laves om tilbage til typen "password".
+ */
+function gemKodeord() {
+    var x = document.getElementById("kodeord");
+    if (x.type === "password") {
+        x.type = "text";
+    }
+    else {
+        x.type = "password";
+    }
+}
