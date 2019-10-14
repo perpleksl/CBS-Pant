@@ -14,7 +14,7 @@ function validate(){
     else{
         attempt --;
         alert(`Du har ${attempt} forsøg tilbage`);
-// Hvis man har 0 forsøg tilbage
+// Hvis man har 0 forsøg tilbage vil boksene forsvinde.
         if( attempt == 0){
             document.getElementById("brugernavn").disabled = true;
             document.getElementById("kodeord").disabled = true;
