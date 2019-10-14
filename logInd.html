@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CBS Pant</title>
+    <link rel="stylesheet" type="text/css" href="log_ind.css"/>
+    <script type="text/javascript" src="login.js"></script>
 </head>
 <body>
+    <!-- Nedenfor vil der blive defineret to bokse, en container til overskrifterne "CBS Pant" og "Log ind". Dette bliver udbygget i CSS -->
+    <div class="container">
+    <div class="main">
+    <h1>CBS Pant</h1>
+<br/>
+    <h2>Log ind</h2>
+
+    <!-- Nu bliver vores log-ind bokse blive lavet vha. <form>. Nederst vil der være en "Log ind"-knap, som indeholder funktionen "validate()". Denne funktion vil blive defineret i javascript -->
+    <form id="log_in" method="post" name="logIn">
+        <label>Brugernavn:</label>
+        <input type="text" name="brugernavn" id="brugernavn" value="" placeholder="CBS-brugernavn"/>
+        <label>Kodeord:</label>
+        <input type="text" name="kodeord" id="kodeord" value="" placeholder="CBS-kodeord"/>
+        <input type="button" value="Log ind" id="login" onclick="validate()"/>
+
+    </form>
+
+</div>
+</div>
 
 </body>
 </html>
