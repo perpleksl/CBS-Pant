@@ -1,18 +1,21 @@
 /* Below line is used for online Google font */
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@font-face {
+    font-family: cbs;
+    src: local(cbs_new_regular.ttf);
+}
+
 h1{
-    background-color: #FEFFED;
-    padding: 30px 35px;
+    background-color: #4968aa;
     margin: -10px -50px;
     text-align:center;
     border-radius: 10px 10px 0 0;
+    font-family: cbs;
 }
 h2{
-    background-color: #FEFFED;
-    padding: 30px 35px;
+    background-color: #4968aa;
     margin: -10px -50px;
     text-align:center;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0px 0px 0 0;
 }
 hr{
     margin: 10px -50px;
@@ -31,7 +34,7 @@ div.main{
     padding: 10px 50px 25px;
     border: 2px solid gray;
     border-radius: 10px;
-    font-family: raleway;
+    font-family: cbs;
     float:left;
     margin-top:50px;
 }
