@@ -7,34 +7,33 @@
 h1{
     background-color: #4968aa;
     margin: -10px -50px;
+    padding: 15px 18px;
     text-align:center;
-    border-radius: 10px 10px 0 0;
-    font-family: cbs;
+    border-radius: 5px 5px 0 0;
+    font-family: Arial, sans-serif;
+    color: white;
 }
-h2{
-    background-color: #4968aa;
-    margin: -10px -50px;
-    text-align:center;
-    border-radius: 0px 0px 0 0;
-}
+
 hr{
     margin: 10px -50px;
     border: 0;
     border-top: 1px solid #ccc;
     margin-bottom: 40px;
+    margin-top: 20px;
 }
 div.container{
     width: 900px;
     height: 610px;
-    margin:35px auto;
-    font-family: 'Raleway', sans-serif;
+    margin: 4% 34%;
+    font-family: cbs, sans-serif;
+
 }
 div.main{
     width: 300px;
     padding: 10px 50px 25px;
     border: 2px solid gray;
     border-radius: 10px;
-    font-family: cbs;
+    font-family: cbs, serif;
     float:left;
     margin-top:50px;
 }
@@ -52,11 +51,12 @@ input[type=text],input[type=password]{
 label{
     color: #464646;
     text-shadow: 0 1px 0 #fff;
-    font-size: 14px;
+    font-size: 100%;
     font-weight: bold;
+    font-family: Arial, sans-serif;
 }
 center{
-    font-size:32px;
+    font-size:35px;
 }
 .note{
     color:red;
@@ -74,8 +74,8 @@ center{
 }
 input[type=button]{
     font-size: 16px;
-    background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
-    border: 1px solid #e5a900;
+    background: linear-gradient(lightgray 100%, black 40%);
+    border: 1px solid black;
     color: #4E4D4B;
     font-weight: bold;
     cursor: pointer;
@@ -85,5 +85,6 @@ input[type=button]{
     outline:none;
 }
 input[type=button]:hover{
-    background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+    background: linear-gradient(#4968aa 5% , #4968aa 100%);
+    color: white;
 }
