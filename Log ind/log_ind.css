@@ -61,9 +61,7 @@ center{
 .note{
     color:red;
 }
-.valid{
-    color:green;
-}
+
 .back{
     text-decoration: none;
     border: 1px solid rgb(0, 143, 255);
