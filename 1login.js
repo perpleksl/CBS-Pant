@@ -49,8 +49,19 @@ function validate(){
     for(i = 0; i < objBrugernavn.length; i++) {
         if(brugernavn == objBrugernavn[i].brugernavn && kodeord == objBrugernavn[i].kodeord) {
             alert ("Velkommen til CBS Pant");
-            window.location = "";
+            window.location = "2Forside.html";
+            return false;
         }
+        else{
+            attempt --;
+            alert(`Du har ${attempt} forsøg tilbage`);
+// Hvis man har 0 forsøg tilbage vil boksene forsvinde.
+            if( attempt == 0){
+                document.getElementById("brugernavn").disabled = true;
+                document.getElementById("kodeord").disabled = true;
+                document.getElementById("login").disabled = true;
+                return false;
+            }
 
     }
 
