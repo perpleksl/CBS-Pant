@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>CBS Pant</title>
     <link rel="stylesheet" type="text/css" href="1log_ind.css"/>
-    <script type="text/javascript" src="1login.js"></script>
+    <script src="UserDB.js"></script>
 </head>
 <body>
     <!-- Nedenfor vil der blive defineret to bokse, en container til overskrifterne "CBS Pant" og "Log ind".
@@ -24,10 +24,10 @@
         <input type="text" name="brugernavn" id="brugernavn" value="" placeholder="CBS-brugernavn"/>
         <label>Kodeord:</label>
         <input type="password" name="kodeord" id="kodeord" value="" placeholder="CBS-kodeord"/>
-        <input type="checkbox" onclick="gemKodeord()">Vis kodeord
+        <input type="checkbox" id="checkbox" onclick="gemKodeord()"/><label for="checkbox">Vis kodeord</label>
         <br/>
         <br/>
-        <input type="button" value="Log ind" id="login" onclick="validate()"/>
+        <input type="button" value="Log ind" id="login"/>
 
     </form>
 
@@ -36,7 +36,7 @@
 
 
 
-
+    <script type="text/javascript" src="1login.js"></script>
 
 
 </body>
