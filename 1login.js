@@ -1,7 +1,7 @@
 // Den følgende variable deffinerer antal loginforsøg.
-var attempt = 3;
-// Nedenfor deffineres funktionen "validate()", som bliver brugt ved at trykke på "log ind"-knappen.
+var attempt = 4;
 
+// Her bliver der skabt en variabel, der indeholder et array med vores brugeres brugernavn og kodeord.
 var objBrugernavn = [
     {
         brugernavn: "Mathias",
@@ -18,50 +18,58 @@ var objBrugernavn = [
     {
         brugernavn: "Kasper",
         kodeord: "kasper123"
+    },
+    {
+        brugernavn: "123",
+        kodeord: "123"
     }
 ]
 
-
-function validate(){
+// Nedenfor deffineres funktionen "validate()", som bliver brugt ved at trykke på "log ind"-knappen.
+function validate() {
     var brugernavn = document.getElementById("brugernavn").value;
     var kodeord = document.getElementById("kodeord").value;
 
-    /*if ( brugernavn == "objBrugern" && password == "cbsPant123"){
-        alert ("Velkommen til CBS Pant");
-        // Efter vores velkomstalert vil man blive linket videre til vores forside.
-        window.location = "Forside.html";
-        return false;
-    }
-   // Hvis man skriver forkert brugernavn og/eller kodeord, vil der blive fjernet et loginforsøg.
-    else{
-        attempt --;
-        alert(`Du har ${attempt} forsøg tilbage`);
-// Hvis man har 0 forsøg tilbage vil boksene forsvinde.
-        if( attempt == 0){
-            document.getElementById("brugernavn").disabled = true;
-            document.getElementById("kodeord").disabled = true;
-            document.getElementById("login").disabled = true;
-            return false;
+    // Nu vil vi lave et loop, der går igennem vores array. Hvis brugernavn og kodeord fra objBrugernavn passer,
+    //vil man blive mødt med en velkomstalert og et link videre til vores forside.
+    for (i = 0; i < objBrugernavn.length; i++) {
+        if (brugernavn == objBrugernavn[i].brugernavn && kodeord == objBrugernavn[i].kodeord) {
+            alert("Velkommen til CBS Pant");
+            window.location = "Forside.html";
+            return;
         }
-    }
-     */
 
-    for(i = 0; i < objBrugernavn.length; i++) {
-        if(brugernavn == objBrugernavn[i].brugernavn && kodeord == objBrugernavn[i].kodeord) {
-            alert ("Velkommen til CBS Pant");
-            window.location = "2Forside.html";
-            return false;
-        }
-        else{
-            attempt --;
-            alert(`Du har ${attempt} forsøg tilbage`);
-// Hvis man har 0 forsøg tilbage vil boksene forsvinde.
-            if( attempt == 0){
-                document.getElementById("brugernavn").disabled = true;
-                document.getElementById("kodeord").disabled = true;
-                document.getElementById("login").disabled = true;
+
+        /*
+           // Hvis man skriver forkert brugernavn og/eller kodeord, vil der blive fjernet et loginforsøg.
+            else(brugernavn != objBrugernavn[i].brugernavn || kodeord != objBrugernavn[i].kodeord) {
+                attempt --;
+                alert(`Du har ${attempt} forsøg tilbage`);
+                return;
+        // Hvis man har 0 forsøg tilbage vil boksene forsvinde.
+                if( attempt == 0){
+                    document.getElementById("brugernavn").disabled = true;
+                    document.getElementById("kodeord").disabled = true;
+                    document.getElementById("login").disabled = true;
+                    return false;
+                }
+
+
+            }
+        */
+
+
+        /*
+        for(i = 0; i < objBrugernavn.length; i++) {
+            if(brugernavn == objBrugernavn[i].brugernavn && kodeord == objBrugernavn[i].kodeord) {
+                alert ("Velkommen til CBS Pant");
+                window.location = "Forside.html";
                 return false;
             }
+
+
+         */
+
 
     }
 
