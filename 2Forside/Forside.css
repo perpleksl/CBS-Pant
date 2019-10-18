@@ -125,5 +125,12 @@ body
 .header h1 {
     font-size: 40px;
 
+.logoutLblPos{
+
+    position:fixed;
+    right:10px;
+    top:5px;
+}
+
 
 
