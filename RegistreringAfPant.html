@@ -10,13 +10,26 @@
 
 </head>
 <body>
-<button onclick="goBack()">Tilbage</button>
+
+<!-- Tilbage knap  -->
+<button id="tilbage" onclick="goBack()">Tilbage</button>
 
 <script>
     function goBack() {
         window.history.back();
     }
 </script>
+
+<!-- Log ud knap  -->
+<button id="logOut" onclick="logOut()">Log ud</button>
+
+<script>
+    function logOut() {
+        document.location.href = "1logInd.html";
+    }
+</script>
+
+
 
 <form action="/action_page.php">
     Pant A antal: <input type="text" name="1"><br>
