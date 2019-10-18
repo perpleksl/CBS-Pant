@@ -2,23 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CBS Pant Registrering af pant</title>
+
+    <link rel="stylesheet" type="text/css" href="RegistreringAfPant.css"/>
+
+
 </head>
 <body>
-<button onclick="tilbage()">Tilbage</button>
+
+<!-- Tilbage knap  -->
+<button id="tilbage" onclick="goBack()">Tilbage</button>
 
 <script>
-    function tilbage() {
+    function goBack() {
         window.history.back();
     }
 </script>
 
-<form action="/action_page.php">
-    Pant A antal: <input type="text" name="1"><br>
-    Pant B antal: <input type="text" name="1"><br>
-    Pant C antal: <input type="text" name="1"><br>
-    <input type="submit" value="Bekræft">
-</form>
+<!-- Log ud knap  -->
+<button id="logOut" onclick="logOut()">Log ud</button>
+
+<script>
+    function logOut() {
+        document.location.href = "1logInd.html";
+    }
+</script>
+
+
+
+
+    Pant A antal: <input id="pantA" type="number" name="1" value=""><br>
+    Pant B antal: <input id="pantB" type="number" name="1" value=""><br>
+    Pant C antal: <input id="pantC" type="number" name="1" value=""><br>
+    <input type="submit" value="Bekræft" onclick="udregnPant()">
+
+
+<input type="submit" value="Print console" onclick="printConsole()">
+
+<br/>
+<br/>
+<br/>
+
+
+<p id="visPantA">
+</p>
+
+<p id="visUdregnetPantA">
+</p>
+
+
+<p id="visPantB">
+</p>
+
+<p id="visUdregnetPantB">
+</p>
+
+
+<p id="visPantC">
+</p>
+
+<p id="visUdregnetPantC">
+</p>
+
+
+
+
+
+<script src="RegistreringAfPant.js"></script>
 
 </body>
 </html>
+
+
+
+
+</body>
+</html>
+
+<!-- Det er i html du så laver et input element, så kan man definere at man kun må skrive tal af længde 1, og så kan man give inputelementet et id.
+
+Så kan man i javascript tilgå det der er skrevet i input-feltet ved at skrive document.getElementById(‘det id dit input felt har’).value.
+
+Og så kan man gemme den værdi i en variabel og tilgå den -->

@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <script src="Velgørenhed.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="Velgørenhed.css"/>
+
 </head>
 <body>
+
+<!-- Tilbage knap  -->
+<button id="tilbage" onclick="goBack()">Tilbage</button>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+
+
+<!-- Log ud knap -->
+<button id="logOut" onclick="logOut()">Log ud</button>
+
+<script>
+    function logOut() {
+        document.location.href = "1logInd.html";
+    }
+</script>
+
+
+
 
 </body>
 </html>

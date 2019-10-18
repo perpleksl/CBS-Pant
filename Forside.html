@@ -3,18 +3,25 @@
 <head>
     <h1><center>Forside</center></h1>
     <p></p>
-    <a href="default.asp" target="_blank"><font size="6
+    <a href = "RegistreringAfPant.html" target="_blank"><font size="6
 ">Registrer pant</a>
 
     <link rel="stylesheet" type="text/css" href="Forside.css"/>
-<title>CBS-Pant forside</title>
+
+    <script src="Forside.js"></script>
+
+<title>CBS-Pant Forside</title>
 </head>
 <body>
 
 <!-- Logud knap -->
-<div style="float:right">
-<a href="1logInd.html">Log ud</a>
-</div>
+<button id="logOut" onclick="logOut()">Log ud</button>
+
+<script>
+    function logOut() {
+        document.location.href = "1logInd.html";
+    }
+</script>
 
 
 
