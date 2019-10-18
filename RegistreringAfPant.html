@@ -13,12 +13,51 @@
     }
 </script>
 
-<form action="/action_page.php">
-    Pant A antal: <input type="text" name="1"><br>
+<form>
+    Pant A antal: <input id="PantA" type="text" name="1" value=""><br>
     Pant B antal: <input type="text" name="1"><br>
     Pant C antal: <input type="text" name="1"><br>
-    <input type="submit" value="Bekræft">
+    <input type="submit" value="Bekræft" onclick="udregnPant()">
 </form>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myNumber").value;
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>
+
+<script src="RegistreringAfPant.js"></script>
+
+
+
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Number field</h3>
+
+<input type="number" id="myNumber" value="2">
+
+<p>Click the button to get the number of the number field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> input elements with type="number" are not supported in IE 9 and earlier versions.</p>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
+
+Det er i html du så laver et input element, så kan man definere at man kun må skrive tal af længde 1, og så kan man give inputelementet et id.
+
+Så kan man i javascript tilgå det der er skrevet i input-feltet ved at skrive document.getElementById(‘det id dit input felt har’).value.
+
+Og så kan man gemme den værdi i en variabel og tilgå den
