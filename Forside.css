@@ -1,0 +1,9 @@
+/* vi designer id'et, logOut, til at være i en fixed position oppe i højre hjørne. Det betyder, at man altid vil kunne
+logge ud, også selvom man scoller ned.  */
+#logOut{
+
+
+    position:fixed;
+    right:1%;
+    top:1%;
+}
