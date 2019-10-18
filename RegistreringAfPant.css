@@ -6,6 +6,10 @@
     top:1%;
 }
 
+/*
+Vi designer id'et, tilbage, til at være i en fixed position oppe i venstre hjørne. Det betyder, at man altid vil kunne
+gå tilbage, også selvom man scroller ned.
+*/
 #tilbage{
     position:fixed;
     left: 1%;

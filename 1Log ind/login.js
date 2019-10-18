@@ -7,7 +7,7 @@ function validate(){
     if (brugernavn == "Formget" && password == "formget#123") {
         alert("Velkommen til CBS Pant");
         // Efter vores velkomstalert vil man blive linket videre til vores forside.
-        window.location = "Forside.html";
+        window.location = "2Forside.html";
         return false;
     }
     attempt--;

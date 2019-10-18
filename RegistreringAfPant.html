@@ -6,7 +6,6 @@
 
     <link rel="stylesheet" type="text/css" href="RegistreringAfPant.css"/>
 
-    <script src="RegistreringAfPant.js"></script>
 
 </head>
 <body>
@@ -31,24 +30,34 @@
 
 
 
-<form>
-    Pant A antal: <input id="PantA" type="text" name="1" value=""><br>
-    Pant B antal: <input id="PantB" type="text" name="1"><br>
-    Pant C antal: <input id="PantC" type="text" name="1"><br>
-    <input type="submit" value="Bekræft" onclick="udregnPant()">
-</form>
 
-<script>
-    function myFunction() {
-        var x = document.getElementById("myNumber").value;
-        document.getElementById("demo").innerHTML = x;
-    }
-</script>
+    Pant A antal: <input id="pantA" type="number" name="1" value=""><br>
+    Pant B antal: <input id="pantB" type="number" name="1" value=""><br>
+    Pant C antal: <input id="pantC" type="number" name="1" value=""><br>
+    <input type="submit" value="Bekræft" onclick="udregnPant()">
+
+
+<input type="submit" value="Print console" onclick="printConsole()">
+
+<br/>
+<br/>
+<br/>
+
+
+<p id="visPantA">
+</p>
+
+<p id="visUdregnetPantA">
+</p>
+
+<p id="visPantB"></p>
+
+
+
+
+
 
 <script src="RegistreringAfPant.js"></script>
-
-
-
 
 </body>
 </html>
