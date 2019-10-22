@@ -5,9 +5,7 @@ this.pantC = document.getElementById('pantC');
 let antalPantARaw = pantA.value;
 let antalPantBRaw = pantB.value;
 let antalPantCRaw = pantC.value;
-let udregnetPantARaw = antalPantARaw * 1;
-let udregnetPantBRaw = antalPantBRaw * 1.5;
-let udregnetPantCRaw = antalPantCRaw * 3;
+
 
 
 function udregnPant() {
@@ -21,7 +19,27 @@ function udregnPant() {
     document.getElementById("visPantC").innerHTML = 'Du har indsamlet ' + pantC.value + ' stykker pant C.';
     document.getElementById("visUdregnetPantC").innerHTML = 'Du har derfor indsamlet ' + pantC.value * 3 + ' kroners pant C.';
 
+
+/*
+    var existingUser = JSON.parse(localStorage.getItem('Pant'));
+
+
+// Nedenfor deffineres funktionen til vores login on click, som bliver brugt ved at trykke på "log ind"-knappen.
+    .onclick = function() {
+        var brugernavnInput = document.getElementById("brugernavn").value;
+        var kodeordInput = document.getElementById("kodeord").value;
+
+        //
+        for (let i = 0; i < existingUser.length; i++) {
+            if (brugernavnInput == existingUser[i].brugernavn && kodeordInput == existingUser[i].kodeord) {
+                document.location.href = "Forside1.html";
+                return true;
+            }
+
+ */
 }
+
+
 
 
 function printConsole() {
