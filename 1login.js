@@ -14,7 +14,7 @@ login.onclick = function() {
     //
     for (let i = 0; i < existingUser.length; i++) {
         if (brugernavnInput == existingUser[i].brugernavn && kodeordInput == existingUser[i].kodeord) {
-            document.location.href = "2Forside.html";
+            document.location.href = "Forside1.html";
             return true;
         }
 
