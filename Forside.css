@@ -125,11 +125,11 @@ body
 .header h1 {
     font-size: 40px;
 
-.logoutLblPos{
+.logOut{
 
     position:fixed;
-    right:10px;
-    top:5px;
+    right:1%;
+    top:1%;
 }
 
 
