@@ -1,6 +1,6 @@
 var login = document.getElementById('login');
 
-// Den følgende variable deffinerer antal loginforsøg.
+// Den følgende variable definerer antal loginforsøg.
 var attempt = 4;
 
 var existingUser = JSON.parse(localStorage.getItem('User'));
