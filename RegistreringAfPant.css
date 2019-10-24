@@ -1,7 +1,8 @@
-#logOut{
+#logUd{
 
 
     position:fixed;
+    float: right;
     right:1%;
     top:1%;
 }
@@ -15,3 +16,22 @@ gå tilbage, også selvom man scroller ned.
     left: 1%;
     top: 1%;
 }
+
+
+.header2 {
+    padding: 40px;
+    text-align: center;
+    background: #4967AA;
+    color: white;
+}
+
+.header2 h1 {
+    font-size: 40px;
+}
+
+.container
+{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 50px auto;

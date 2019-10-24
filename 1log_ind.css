@@ -4,6 +4,14 @@
     src: local(cbs_new_regular.ttf);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("billeder/studerende_cbs.jpg");
+    background-size: cover;
+}
+
+
 h1{
     background-color: #4968aa;
     margin: -10px -50px;
@@ -93,3 +101,6 @@ input[type=button]:hover{
     background: linear-gradient(#4968aa 5% , #4968aa 100%);
     color: white;
 }
+
+
+
