@@ -10,6 +10,10 @@
 <form action="/action_page.php" method="get">
     <h2>Velgørenhed</h2>
     <fieldset>
+        <legend>Donation amount (kr.)</legend>
+        <input type="text" name="amount" value="10.00" />
+    </fieldset>
+    <fieldset>
         <legend>Hvem vil du donere til?</legend>
         <input type="checkbox" name="organisation" value="WHO" checked>
         Vælg velgørenhedsorganisation WHO<br>
@@ -17,10 +21,6 @@
         Vælg velgørenhedsorganisation Plastic Change<br>
         <input type="checkbox" name="organisation" value="Sea Turtle Conservancy" checked>
         Vælg velgørenhedsorganisation Sea Turtle Conservancy<br>
-    </fieldset>
-    <fieldset>
-        <legend>Donation amount (kr.)</legend>
-        <input type="text" name="amount" value="10.00" />
     </fieldset>
     <input type="button" id="calc-btn" value="Doner" />
     <div class="result-display"> Donation til de valgte organisationer: <span id="result">0</span> kr.</div>
