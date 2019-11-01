@@ -7,7 +7,7 @@ var existingUser = JSON.parse(localStorage.getItem('User'));
 
 
 // Nedenfor deffineres funktionen til vores login on click, som bliver brugt ved at trykke på "log ind"-knappen.
-login.onclick = function() {
+login = function() {
     var brugernavnInput = document.getElementById("brugernavn").value;
     var kodeordInput = document.getElementById("kodeord").value;
 
