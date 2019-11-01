@@ -1,13 +1,7 @@
-#logOut{
-
-
-    position:fixed;
-    right:1%;
-    top:1%;
+fieldset {
+    margin-bottom: 0.5em;
 }
 
-#tilbage{
-    position:fixed;
-    left: 1%;
-    top: 1%;
+.result-display {
+    margin-top: 1em;
 }
