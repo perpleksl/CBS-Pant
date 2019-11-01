@@ -1,10 +1,14 @@
+/*
 this.pantA = document.getElementById('pantA');
 this.pantB = document.getElementById('pantB');
 this.pantC = document.getElementById('pantC');
 
+
 let antalPantARaw = pantA.value;
 let antalPantBRaw = pantB.value;
 let antalPantCRaw = pantC.value;
+
+
 
 
 
@@ -24,13 +28,72 @@ function addPant2() {
 }
 
 
+ */
 
 
-function sePant() {
+// Øvelse 15.1 i bogen viser buildTable funktionen
+function buildTable(data) {
+  let table = document.createElement("table");
 
+  let fields = Object.keys(data[0]);
+  let headRow = document.createElement("tr");
+  fields.forEach(function(field) {
+    let headCell = document.createElement("th");
+    headCell.textContent = field;
+    headRow.appendChild(headCell);
+  });
+  table.appendChild(headRow);
+
+  data.forEach(function(object) {
+    let row = document.createElement("tr");
+    fields.forEach(function(field) {
+      let cell = document.createElement("td");
+      cell.textContent = object[field];
+      if (typeof object[field] == "number") {
+        cell.style.textAlign = "left";
+      }
+      row.appendChild(cell);
+    });
+    table.appendChild(row);
+  });
+
+  return table;
+}
+
+let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
+// Her add'er vi pant til vores localStorage via funktionen addPant()
+function addPant() {
+  var pushA = inputA.value;
+  var pushB = inputB.value;
+  var pushC = inputC.value;
+  var pushAmoney = pushA * 1;
+  var pushBmoney = pushB * 1.5;
+  var pushCmoney = pushC * 3;
+
+  pantListParsed.push(new Pant(pushA, pushB, pushC, pushAmoney, pushBmoney, pushCmoney));
+  var pantListString = JSON.stringify(pantListParsed);
+  localStorage.setItem('Pant', pantListString);
+
+  //Nu vil vi gerne se vores localStorage i vores consol, når vi kalder funktionen
   var sePant = JSON.parse(localStorage.getItem('Pant'));
   console.log(sePant);
+  document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
 
+//implementering af øvelse 15.1 ovenfor
+
+
+}
+
+document.querySelector("#pantlist")
+    .appendChild(buildTable(pantListParsed));
+
+
+
+
+
+  function donation() {
+    document.location.href="Velgørenhed.html";
+  }
 
   /*
   var pantInput = document.getElementById("Pant").value;
@@ -61,6 +124,14 @@ function sePant() {
      */
 
 
-}
+/*
+
+for loops
+yourArray.forEach(function (arrayItem) {
+    var x = arrayItem.prop1 + 2;
+    console.log(x);
+});
+
+ */
 
 

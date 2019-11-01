@@ -1,17 +1,10 @@
-/* Below line is used for online Google font */
-@font-face {
-    font-family: cbs;
-    src: local(cbs_new_regular.ttf);
-}
-
-
 h1{
     background-color: #4968aa;
     margin: -10px -50px;
     padding: 15px 18px;
     text-align:center;
     border-radius: 5px 5px 0 0;
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", sans-serif;
     color: white;
 }
 
@@ -26,7 +19,6 @@ div.container{
     width: 70%;
     height: 100%;
     margin: 5% 32%;
-    font-family: cbs, sans-serif;
 
 }
 div.main{
@@ -34,7 +26,6 @@ div.main{
     padding: 10px 50px 25px;
     border: 2px solid gray;
     border-radius: 10px;
-    font-family: cbs, serif;
     float:left;
     margin-top:5%;
 }

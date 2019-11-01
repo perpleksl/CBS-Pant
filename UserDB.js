@@ -6,7 +6,6 @@ class User {
 }
 if(localStorage.getItem('User') == null) {
     var userList = [];
-    userList.push(new User('Alexandra', 'alexandra123'));
     userList.push(new User('Magnus', 'magnus123'));
     userList.push(new User('Mathias','mathias123'));
     userList.push(new User('Kasper','kasper123'));
