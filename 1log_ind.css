@@ -4,13 +4,6 @@
     src: local(cbs_new_regular.ttf);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("billeder/studerende_cbs.jpg");
-    background-size: cover;
-}
-
 
 h1{
     background-color: #4968aa;

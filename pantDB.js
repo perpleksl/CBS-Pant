@@ -19,7 +19,7 @@ let inputB = document.getElementById('pantB');
 let inputC = document.getElementById('pantC');
 
 /*
-Hernede laver vi så en variabel, der indeholder vores pantregistreringsarray.
+Hernede laver vi så en variabel, der indeholder vores pantregistreringsarray (dummy-data).
  */
 var pantList = [];
     pantList.push(new Pant('2', '4', '6', '2', '6', '18'));
@@ -38,7 +38,7 @@ var pantList = [];
     {name: "Mont Blanc", height: 4808, place: "Italy/France"}
 ]; */
 
-
+// Her add'er vi pant til vores localStorage via funktionen addPant()
 function addPant() {
     var pushA = inputA.value;
     var pushB = inputB.value;
@@ -51,6 +51,20 @@ function addPant() {
     localStorage.setItem('Pant', pantListString);
 }
 
+/*
+var numbersB = [pantListString];
+var sumB = numbersB.reduce(myFunctionB);
+
+document.getElementById("visFuldPantB").innerHTML = 'Du har derfor indsamlet ' + sumB + ' kroners pant B.';
+
+function myFunctionB(total, value, index, array) {
+    return total + value;
+
+
+}
+
+
+ */
 
 // Øvelse 15.1 i bogen viser buildTable funktionen
 

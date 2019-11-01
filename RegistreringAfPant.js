@@ -47,14 +47,7 @@ function sePant() {
 
    */
 
-  var numbersB = [pantListString];
-  var sumB = numbersB.reduce(myFunctionB);
 
-  document.getElementById("visFuldPantB").innerHTML = 'Du har derfor indsamlet ' + sumB + ' kroners pant B.';
-
-  function myFunctionB(total, value, index, array) {
-    return total + value;
-  }
 
     /*
         document.getElementById("visFuldPantA").innerHTML = 'Du har indsamlet ' + pantA.value + ' stykker pant A.';
