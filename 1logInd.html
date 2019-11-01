@@ -27,17 +27,27 @@
         <input type="checkbox" id="checkbox" onclick="gemKodeord()"/><label for="checkbox">Vis kodeord</label>
         <br/>
         <br/>
-        <input type="button" value="Log ind" id="login"/>
-
+        <input type="button" value="Log ind" id="login" onclick="Login();">
     </form>
 
 </div>
 </div>
 
-
+    <!-- Get the element of the input field.
+    Execute the keyup function with addEventListener when the user releases a key on the keyboard.
+    Check the number of the pressed key using JavaScript keyCode property.
+    If keyCode is 13, trigger button element with click() event. 13 is the number of the enter key on the keyboard -->
+    <script>
+        var input = document.getElementById("log_in");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("login").click();
+            }
+        });
+    </script>
 
     <script type="text/javascript" src="1login.js"></script>
-
 
 
 </body>
