@@ -5,71 +5,95 @@
     <title>CBS Pant Registrering af pant</title>
 
     <link rel="stylesheet" type="text/css" href="RegistreringAfPant.css"/>
-    <script src="pantDB.js"></script>
+
 
 
 </head>
 <body>
+<div class="container">
+<div class="header2">
+    <!-- Log ud knap  -->
+    <button id="logUd" onclick="logOut()">Log ud</button>
 
-<!-- Tilbage knap  -->
-<button id="tilbage" onclick="goBack()">Tilbage</button>
+    <script>
+        function logOut() {
+            document.location.href = "1logInd.html";
+        }
+    </script>
+    <!-- Tilbage knap  -->
+    <button id="tilbage" onclick="goBack()">Tilbage</button>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+    <h1>Registrering</h1>
 
-<!-- Log ud knap  -->
-<button id="logOut" onclick="logOut()">Log ud</button>
-
-<script>
-    function logOut() {
-        document.location.href = "1logInd.html";
-    }
-</script>
-
-
-
+</div>
+</div>
+<br/>
+<br/>
 
     Pant A antal: <input id="pantA" type="number" name="1" value=""><br>
     Pant B antal: <input id="pantB" type="number" name="1" value=""><br>
     Pant C antal: <input id="pantC" type="number" name="1" value=""><br>
-    <input type="submit" value="Bekræft" onclick="udregnPant()">
+<br/>
+    <input type="submit" value="Tilføj pant" onclick="addPant()">
 
 
-<input type="submit" value="Print console" onclick="printConsole()">
+<input type="submit" value="Se pant" onclick="sePant()">
 
 <br/>
 <br/>
 <br/>
 
 
-<p id="visPantA">
+<p id="visNyPantA">
 </p>
 
-<p id="visUdregnetPantA">
-</p>
-
-
-<p id="visPantB">
-</p>
-
-<p id="visUdregnetPantB">
+<p id="visNyUdregnetPantA">
 </p>
 
 
-<p id="visPantC">
+<p id="visNyPantB">
 </p>
 
-<p id="visUdregnetPantC">
+<p id="visNyUdregnetPantB">
 </p>
 
 
+<p id="visNyPantC">
+</p>
+
+<p id="visNyUdregnetPantC">
+</p>
 
 
+<br/>
+<br/>
+
+
+
+<p id="visFuldPantA">
+</p>
+
+<p id="visFuldUdregnetPantA">
+</p>
+
+
+<p id="visFuldPantB">
+</p>
+
+<p id="visFuldUdregnetPantB">
+</p>
+
+
+<p id="visFuldPantC">
+</p>
+
+<p id="visFuldUdregnetPantC">
+</p>
+
+<div id="pantlist"></div>
 
 <script src="RegistreringAfPant.js"></script>
+<script src="pantDB.js"></script>
 
 
 </body>
