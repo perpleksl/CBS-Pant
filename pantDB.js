@@ -60,7 +60,7 @@ if(localStorage.getItem('Pant') == null) {
 ]; */
 
 
-
+/*
 
     var numbersB = [pantListString.bPantMoney];
     var sumB = numbersB.reduce(myFunctionB);
@@ -73,6 +73,8 @@ if(localStorage.getItem('Pant') == null) {
 
     }
 
+
+ */
 
 
 

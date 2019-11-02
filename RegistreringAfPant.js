@@ -74,10 +74,11 @@ function addPant() {
   var pantListString = JSON.stringify(pantListParsed);
   localStorage.setItem('Pant', pantListString);
 
-  //Nu vil vi gerne se vores localStorage i vores consol, når vi kalder funktionen
+  //Nu vil vi gerne se vores localStorage i vores console, når vi kalder funktionen
   var sePant = JSON.parse(localStorage.getItem('Pant'));
   console.log(sePant);
-  document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
+
+ // document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
 
 //implementering af øvelse 15.1 ovenfor
 
@@ -87,12 +88,18 @@ function addPant() {
 document.querySelector("#pantlist")
     .appendChild(buildTable(pantListParsed));
 
+var sum = 0;
+pantListParsed.forEach(bPantB);
+
+function bPantB(item){
+  sum += item;
+  document.getElementById('sumAfPantB').innerHTML = sum;
+}
 
 
 
-
-  function donation() {
-    document.location.href="Velgørenhed.html";
+  function panthistorik() {
+    document.location.href="Panthistorik.html";
   }
 
   /*
