@@ -43,11 +43,11 @@ Dermed siger vi, at "if" kodeordets type er et 'password', så skal det laves om
 laves om tilbage til typen "password".
  */
 function gemKodeord() {
-    var x = document.getElementById("kodeord");
-    if (x.type === "password") {
-        x.type = "text";
+    var a = document.getElementById("kodeord");
+    if (a.type === "password") {
+        a.type = "text";
     }
     else {
-        x.type = "password";
+        a.type = "password";
     }
 }
