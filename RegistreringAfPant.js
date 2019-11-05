@@ -61,7 +61,9 @@ function buildTable(data) {
 }
 
 let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
-// Her add'er vi pant til vores localStorage via funktionen addPant()
+
+
+// KR: Her add'er vi pant til vores localStorage via funktionen addPant()
 function addPant() {
   var pushA = inputA.value;
   var pushB = inputB.value;
@@ -88,6 +90,8 @@ document.querySelector("#pantlist")
 
 
 
+
+//KR: Her prøver vi
 var sum = 0;
 pantListParsed.forEach(bPantB);
 
