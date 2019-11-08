@@ -1,3 +1,4 @@
+// Vores tilbagefunktion, der egentlig bare fører dig tilbage til det tidligere trin i vores system, i dette tilfælde, forsiden.
 function goToFront() {
   document.location.href="Forside1.html";
 }
@@ -5,38 +6,56 @@ function goToFront() {
 
 
 /*
-this.pantA = document.getElementById('pantA');
-this.pantB = document.getElementById('pantB');
-this.pantC = document.getElementById('pantC');
+
+KR: Allerførst tænkte vi, at man kunne tage de værdier, der bliver tastet ind i vores forms og gange dem med det samme, så man
+på denne måde kunne få både vores pant-værdier i antal og kr. Derfor startede vi med at hente værdierne fra vores forms:
+
+  this.pantA = document.getElementById('pantA');
+  this.pantB = document.getElementById('pantB');
+  this.pantC = document.getElementById('pantC');
 
 
-let antalPantARaw = pantA.value;
-let antalPantBRaw = pantB.value;
-let antalPantCRaw = pantC.value;
+KR: Efterfølgende ville vi definere vores antal af den givende pant, og bagefter gange det, med værdien i kr, den givende pant har.
+Dette kunne godt lade sig gøre, problemet var bare, at vi ikke havde nogen måde at gemme de værdierne, vi får fra forms. Derfor
+skrottede vi idéen og begyndte at tænke på at lave noget med localStorage.
 
-
-
-
-
-function addPant2() {
-  localStorage.setItem('pantA', pantA.value);
-  localStorage.setItem('pantB', pantB.value);
-  localStorage.setItem('pantC', pantC.value);
-    document.getElementById("visNyPantA").innerHTML = 'Du har tilføjet ' + pantA.value + ' stykker pant A til din samlede indsamling.';
-    document.getElementById("visNyUdregnetPantA").innerHTML = 'Du har tilføjet ' + pantA.value * 1 + ' kroners pant til din samlede indsamling.';
-    document.getElementById("visNyPantB").innerHTML = 'Du har tilføjet ' + pantB.value + ' stykker pant B til din samlede indsamling.';
-    document.getElementById("visNyUdregnetPantB").innerHTML = 'Du har tilføjet ' + pantB.value * 1.5 + ' kroners pant til din samlede indsamling.';
-    document.getElementById("visNyPantC").innerHTML = 'Du har tilføjet ' + pantC.value + ' stykker pant C til din samlede indsamling.';
-    document.getElementById("visNyUdregnetPantC").innerHTML = 'Du har tilføjet ' + pantC.value * 3 + ' kroners pant til din samlede indsamling.';
+  let antalPantA = pantA.value;
+  let antalPantB = pantB.value;
+  let antalPantC = pantC.value;
+  let udregnetPantA = antalPantA * 1;
+  let udregnetPantB = antalPantB * 1.5;
+  let udregnetPantC = antalPantC * 3;
 
 
 
-}
+
+KR: Denne gang startede vi med at sætte disse values som strings i localStorage. Herefter lavede vi en masse 'document.getElementById.innerHTML
+Hvor vi gav brugeren at vide, hvad denne havde indtastet. Det var også her vi gjorde udregningerne for panten i kr. Det fandt vi senere
+ud af ikke var særlig smart, der hermed kun kunne stå disse værdier en gang - man kunne altså ikke push'e det ind.
+Dette giver også god mening, da man bliver nødt til at tilføje flere værdier hver gang man indtaster noget. Måden man gør det på i Javascript
+er ved brug af et array, så vores array får et nyt array med nye objekter inde i sig.
+Dermed måtte vi finde på noget andet.
+
+  function addPant2() {
+    localStorage.setItem('pantA', pantA.value);
+    localStorage.setItem('pantB', pantB.value);
+    localStorage.setItem('pantC', pantC.value);
+      document.getElementById("visNyPantA").innerHTML = 'Du har tilføjet ' + pantA.value + ' stykker pant A til din samlede indsamling.';
+      document.getElementById("visNyUdregnetPantA").innerHTML = 'Du har tilføjet ' + pantA.value * 1 + ' kroners pant til din samlede indsamling.';
+      document.getElementById("visNyPantB").innerHTML = 'Du har tilføjet ' + pantB.value + ' stykker pant B til din samlede indsamling.';
+      document.getElementById("visNyUdregnetPantB").innerHTML = 'Du har tilføjet ' + pantB.value * 1.5 + ' kroners pant til din samlede indsamling.';
+      document.getElementById("visNyPantC").innerHTML = 'Du har tilføjet ' + pantC.value + ' stykker pant C til din samlede indsamling.';
+      document.getElementById("visNyUdregnetPantC").innerHTML = 'Du har tilføjet ' + pantC.value * 3 + ' kroners pant til din samlede indsamling.';
+  }
 
 
  */
 
 
+
+/*
+KR: Vi starter ud med at definere vores parsed JSON
+ */
 
 let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
 console.log(pantListParsed);

@@ -1,3 +1,4 @@
+// Vores tilbagefunktion, der egentlig bare fører dig tilbage til det tidligere trin i vores system, i dette tilfælde registrering af pant.
 function goToReg() {
     document.location.href="RegistreringAfPant.html";
 }
@@ -45,7 +46,15 @@ document.querySelector("#pantlist")
 
 
 
+/*
+KR: Vi laver en funktion, der skal udregne vores pant.
+Inde i denne funktion, definerer vi en variabel, sum, som har værdien 0.
+Nu starter vi et for-loop, hvor 'i' (vores array-nummer) = 0 (altså, det starter på 0), 'i' er mindre eller lig med vores JSON parsed array med vores pant-data, og 'i' skal addere sin værdi med 1 hver gang den går igennem loopet.
+Inde i dette loop definerer vi 'totalPantKr' til at være 'aPantMoney' + b'PantMoney + cPantMoney i det i'ende array inde i pantListParsed
 
+Vores sum bliver herefter adderet med 'totalPantKr' og udregnet hver gang vi går igennem loopet.
+Den endelige sum bliver til sidst skrevet ind i vores konsol og i elementID'et 'sumAfPantB', hvor der står den endelige sum + " kr.".
+ */
 function udregnPant() {
 
 
@@ -53,18 +62,12 @@ function udregnPant() {
     for (i = 0; i <= pantListParsed.length; i++) {
 
 
-        let pantListBkr = pantListParsed[i].aPantMoney + pantListParsed[i].bPantMoney + pantListParsed[i].cPantMoney;
-        sum += pantListBkr;
+        let totalPantKr = pantListParsed[i].aPantMoney + pantListParsed[i].bPantMoney + pantListParsed[i].cPantMoney;
+        sum += totalPantKr;
 
         console.log(sum);
         document.getElementById('sumAfPantB').innerHTML = sum + " kr.";
     }
-    // Object.keys(pantListBkr).forEach(function (key) {
 
-    //sum += pantListBkr[key];
-    // console.log(pantListBkr[key]);
-
-
-    // });
 
 }
