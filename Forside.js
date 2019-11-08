@@ -1,3 +1,3 @@
 
-window.location.href="RegistreringAfPant.html";
+document.location.href="RegistreringAfPant.html";
 

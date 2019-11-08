@@ -1,8 +1,10 @@
+// KR: Deffinerer en variabel, der hedder login, som henter elementerne fra ID'et 'login' i HTML'en
 var login = document.getElementById('login');
 
 // Den følgende variable definerer antal loginforsøg.
 var attempt = 4;
 
+// KR:
 var existingUser = JSON.parse(localStorage.getItem('User'));
 
 
@@ -11,7 +13,7 @@ login.onclick = function() {
     var brugernavnInput = document.getElementById("brugernavn").value;
     var kodeordInput = document.getElementById("kodeord").value;
 
-    //
+    //KR: For-loop, der går igennem de eksisterende brugere, hvor der kommer et if-statement. Hvis brugernavn og kodeord hører sammen, vil man blive linket videre til vores forside.
     for (let i = 0; i < existingUser.length; i++) {
         if (brugernavnInput == existingUser[i].brugernavn && kodeordInput == existingUser[i].kodeord) {
             document.location.href = "Forside1.html";
@@ -38,16 +40,16 @@ login.onclick = function() {
 
 
 
-/* Nu vil vi lave funktionen "gemKodeord", der bliver aktiveret, når man trykker på checkboksen.
+/* KR: Nu vil vi lave funktionen "gemKodeord", der bliver aktiveret, når man trykker på checkboksen.
 Dermed siger vi, at "if" kodeordets type er et 'password', så skal det laves om til typen 'text'. "else" vil kodeordet
 laves om tilbage til typen "password".
  */
 function gemKodeord() {
-    var x = document.getElementById("kodeord");
-    if (x.type === "password") {
-        x.type = "text";
+    var a = document.getElementById("kodeord");
+    if (a.type === "password") {
+        a.type = "text";
     }
     else {
-        x.type = "password";
+        a.type = "password";
     }
 }

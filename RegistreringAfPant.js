@@ -61,7 +61,9 @@ function buildTable(data) {
 }
 
 let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
-// Her add'er vi pant til vores localStorage via funktionen addPant()
+
+
+// KR: Her add'er vi pant til vores localStorage via funktionen addPant()
 function addPant() {
   var pushA = inputA.value;
   var pushB = inputB.value;
@@ -74,25 +76,34 @@ function addPant() {
   var pantListString = JSON.stringify(pantListParsed);
   localStorage.setItem('Pant', pantListString);
 
-  //Nu vil vi gerne se vores localStorage i vores consol, når vi kalder funktionen
+  //Nu vil vi gerne se vores localStorage i vores console, når vi kalder funktionen
   var sePant = JSON.parse(localStorage.getItem('Pant'));
   console.log(sePant);
-  document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
 
-//implementering af øvelse 15.1 ovenfor
-
+ document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
 
 }
 
+//implementering af øvelse 15.1 ovenfor
 document.querySelector("#pantlist")
     .appendChild(buildTable(pantListParsed));
 
 
 
 
+//KR: Her prøver vi
+var sum = 0;
+pantListParsed.forEach(bPantB);
 
-  function donation() {
-    document.location.href="Velgørenhed.html";
+function bPantB(item){
+  sum += item;
+  document.getElementById('sumAfPantB').innerHTML = sum;
+}
+
+
+
+  function panthistorik() {
+    document.location.href="Panthistorik.html";
   }
 
   /*
@@ -134,4 +145,11 @@ yourArray.forEach(function (arrayItem) {
 
  */
 
+
+
+
+/*
+Når man trykker på 'tilføj pant', skal der komme en alert, der siger 'tak for din registrering...'. Bagefter skal siden opdateres
+Husk også at tilføje en besked øverst med 'Hvis du ikke har noget at registrere, kan du roligt gå videre til næste side.'
+ */
 

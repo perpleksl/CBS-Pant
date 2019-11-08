@@ -8,6 +8,9 @@ let inputC = document.getElementById('pantC');
 /*
 Vi laver en pant-klasse. Grunden til det er, at vi gerne vil lave et array med vores pantregistreringsværdier, så man
 kan lave flere registreringer.
+
+I bogen:
+class, 101, 102, 115, 119, 263, 331
  */
 
 class Pant {
@@ -60,7 +63,7 @@ if(localStorage.getItem('Pant') == null) {
 ]; */
 
 
-
+/*
 
     var numbersB = [pantListString.bPantMoney];
     var sumB = numbersB.reduce(myFunctionB);
@@ -73,6 +76,8 @@ if(localStorage.getItem('Pant') == null) {
 
     }
 
+
+ */
 
 
 
