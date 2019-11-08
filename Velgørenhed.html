@@ -25,64 +25,14 @@
         Vælg velgørenhedsorganisation Sea Turtle Conservancy<br>
         <p id="text2" style="display:none">Tak for din donation til Sea Turtle Conservancy. Dine penge går til at redde verden.</p>
     </fieldset>
-    <input type="button" id="calc-btn" value="Doner" />
+    <input type="button" id="calc-btn" value="Doner" onClick="if(confirm('Er du sikker på, at du vil donere til de valgte organisationer?'))
+alert('Tak for din donation!');
+else alert('Foretag ændringer og prøv igen')">
     <div class="result-display"> Donation til de valgte organisationer: <span id="result">0</span> kr.</div>
 </form>
 
-<script>
-    const form = document.forms[0];
-
-    form.elements['calc-btn'].addEventListener('click', function() {
-        let total = parseInt(form.elements['amount'].value, 10);
-        let count = selectedCheckboxes(form, 'organisation').length;
-        document.getElementById('result').textContent = average(total, count).toFixed(2);
-    });
-
-    triggerEvent(form.elements['calc-btn'], 'click'); // Calculate on load
-
-    function average(total, count) {
-        return count > 0 ? total / count : 0;
-    }
-
-    function selectedCheckboxes(form, name) {
-        return Array.from(form.elements[name]).filter(c => c.checked);
-    }
-
-    function triggerEvent(el, eventName) {
-        var event = document.createEvent('HTMLEvents');
-        event.initEvent(eventName, true, false);
-        el.dispatchEvent(event);
-    }
-</script>
-
-<script>
-    function myFunction() {
-        var checkBox = document.getElementById("1");
-        var text = document.getElementById("text");
-        if (checkBox.checked == true){
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-    }
-    function myFunction1() {
-        var checkBox = document.getElementById("2");
-        var text = document.getElementById("text1");
-        if (checkBox.checked == true){
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-    }
-    function myFunction2() {
-        var checkBox = document.getElementById("3");
-        var text = document.getElementById("text2");
-        if (checkBox.checked == true){
-            text.style.display = "block";
-        } else {
-            text.style.display = "none";
-        }
-    }
+<script
+    src="Velgørenhed.js">
 </script>
 
 
