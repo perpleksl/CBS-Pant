@@ -8,30 +8,42 @@
     <link rel="stylesheet" type="text/css" href="Panthistorik.css"/>
 
 </head>
-<body>
+<body onload="udregnPant(); buildTable()">
 
 <!-- Tilbage knap  -->
-    <button id="tilbage" onclick="goBack()">Tilbage</button>
+    <button id="tilbage" onclick="goToReg()">Tilbage</button>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+
+
 
 
 
 <!-- Logud knap -->
 <button id="logOut" onclick="logOut()">Log ud</button>
 
-<script>
-    function logOut() {
-        document.location.href = "1logInd.html";
-    }
-</script>
+
+<br/>
+<h1>Din totale indsamlede pant:</h1>
+<h2 id="sumAfPantB"></h2>
 
 
 
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<h3>Din panthistorik:</h3>
+<p id="pantlist"></p>
+
+
+
+
+    <script src="pantDB.js"></script>
+    <script src="Panthistorik.js"></script>
+    <script src="RegistreringAfPant.js"></script>
+    <script src="LogUd.js"></script>
 
 </body>
 </html>

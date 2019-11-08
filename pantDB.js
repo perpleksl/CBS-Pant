@@ -35,10 +35,10 @@ Hernede laver vi så en variabel, der indeholder vores pantregistreringsarray (d
 
 if(localStorage.getItem('Pant') == null) {
     var pantList = [];
-    pantList.push(new Pant('2', '4', '6', '2', 6, '18'));
-    pantList.push(new Pant('10', '4', '24', 10, 6, '72'));
-    pantList.push(new Pant('20', '23', '6', '20', 30, '18'));
-    pantList.push(new Pant('2', '4', '6', '2', 6, '18'));
+    pantList.push(new Pant(2, 4, 6, 2, 6, 18));
+    pantList.push(new Pant(10, 4, 24, 10, 6, 72));
+    pantList.push(new Pant(20, 23, 6, 20, 30, 18));
+    pantList.push(new Pant(2, 4, 6, 2, 6, 18));
     var pantListString = JSON.stringify(pantList)
     localStorage.setItem('Pant', pantListString)
 }

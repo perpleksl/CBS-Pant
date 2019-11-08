@@ -1,3 +1,9 @@
+function goToFront() {
+  document.location.href="Forside1.html";
+}
+
+
+
 /*
 this.pantA = document.getElementById('pantA');
 this.pantB = document.getElementById('pantB');
@@ -31,36 +37,9 @@ function addPant2() {
  */
 
 
-// Øvelse 15.1 i bogen viser buildTable funktionen
-function buildTable(data) {
-  let table = document.createElement("table");
-
-  let fields = Object.keys(data[0]);
-  let headRow = document.createElement("tr");
-  fields.forEach(function(field) {
-    let headCell = document.createElement("th");
-    headCell.textContent = field;
-    headRow.appendChild(headCell);
-  });
-  table.appendChild(headRow);
-
-  data.forEach(function(object) {
-    let row = document.createElement("tr");
-    fields.forEach(function(field) {
-      let cell = document.createElement("td");
-      cell.textContent = object[field];
-      if (typeof object[field] == "number") {
-        cell.style.textAlign = "left";
-      }
-      row.appendChild(cell);
-    });
-    table.appendChild(row);
-  });
-
-  return table;
-}
 
 let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
+console.log(pantListParsed);
 
 
 // KR: Her add'er vi pant til vores localStorage via funktionen addPant()
@@ -84,22 +63,54 @@ function addPant() {
 
 }
 
-//implementering af øvelse 15.1 ovenfor
-document.querySelector("#pantlist")
-    .appendChild(buildTable(pantListParsed));
+
+
+
+/* KR: Vi vil gerne addere vores pantlist. Vi har derfor prøvet at implementere denne: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_foreach2
+Her prøver vi derfor at lave en variabel, der er lig 0. Bagefter tager vi vores pantListParsed, som get'er vores Pant data fra localStorage
+Her bliver forEach kørt i denne. forEach er en metode, der kalder en funktion for hver element i array'et. Bagfter laver vi en ny funktion
+der indeholder en værdi, "item". Vores variabel, sum skal herefter addere de værdierne og finde summen af det. Dette skal skrives ind i HTML'en 'sumAfPantB.
+*/
 
 
 
 
-//KR: Her prøver vi
-var sum = 0;
-pantListParsed.forEach(bPantB);
 
-function bPantB(item){
-  sum += item;
-  document.getElementById('sumAfPantB').innerHTML = sum;
+//  function bPantB(resultB) {
+//    sum += resultB;
+//    document.getElementById('sumAfPantB').innerHTML = sum;
+//  }
+// }
+
+
+
+/*KR: 2. forsøg på For/of loop igennem pantBMoney: https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_for_of
+var pantA = inputA.value;
+var pantB = inputB.value;
+var pantC = inputC.value;
+var pantAmoney = pantA * 1;
+var pantBmoney = pantB * 1.5;
+var pantCmoney = pantC * 3;
+
+var z;
+
+for (z of pantBmoney) {
+  document.write(z + "<br >");
 }
 
+ */
+
+
+
+/*KR: While loop, side 30 i bogen
+
+
+let number = 0;
+while (pantListParsed.value)
+
+
+
+ */
 
 
   function panthistorik() {
