@@ -1,3 +1,4 @@
+//KR: Vi definerer vores indtaste værdier fra vores forms ved at getElementById
 let inputA = document.getElementById('pantA');
 let inputB = document.getElementById('pantB');
 let inputC = document.getElementById('pantC');

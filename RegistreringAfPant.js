@@ -54,7 +54,9 @@ Dermed måtte vi finde på noget andet.
 
 
 /*
-KR: Vi starter ud med at definere vores parsed JSON
+KR: Vi starter ud med at definere en variabel, så vi kan hente vores pushede arrays fra vores pant-klasse. Dette gøres vha.
+JSON.parse. Her bruger vi komandoen 'getItem' fra vores localStorege ved at bruge JSON.parse. Det denne gør er, at 'forvandle'
+vores stringify'ede (jf. funktionen nedenfor) arrays fra localStorege.
  */
 
 let pantListParsed = JSON.parse(localStorage.getItem('Pant'));
@@ -63,6 +65,9 @@ console.log(pantListParsed);
 
 // KR: Her add'er vi pant til vores localStorage via funktionen addPant()
 function addPant() {
+
+//KR: Nu forbinder vi denne funktion med vores forms i HTML ved at tage value'en af vores inputA,B & C, som variabler fra vores pantDB.js.
+//Efterfølgende ganger vi op, så vi også har de monetære værdier.
   var pushA = inputA.value;
   var pushB = inputB.value;
   var pushC = inputC.value;
@@ -70,14 +75,22 @@ function addPant() {
   var pushBmoney = pushB * 1.5;
   var pushCmoney = pushC * 3;
 
+
+  //KR: Nu henter vi vores parsed pant-klasse ned for at push'e ind i den. Den kommer altså tilbage som et array, hvor
+  // der bliver push'et et nyt array derind med vores nye værdier.
   pantListParsed.push(new Pant(pushA, pushB, pushC, pushAmoney, pushBmoney, pushCmoney));
+  //KR: Nu definerer vi, at man skal lave vores parsed arrays om til strings igen (ellers kan det ikke være i localStorage.
   var pantListString = JSON.stringify(pantListParsed);
+  //KR: Nu siger vi 'setItem', hvilket tilføjer nye værdier til localStorage. Der bliver i parentesen defineret, at de
+  // nye værdier skal tilføjes som values i vores key, Pant.
   localStorage.setItem('Pant', pantListString);
 
   //Nu vil vi gerne se vores localStorage i vores console, når vi kalder funktionen
   var sePant = JSON.parse(localStorage.getItem('Pant'));
   console.log(sePant);
 
+  //KR: lidt lir, så man kan se, man har tilføjet noget
+  // DETTE SKAL ÆNDRES TIL EN ALERTBESKED OG ET LINK TIL NÆSTE SIDE!
  document.getElementById('Tak').innerHTML = "Mange tak for din registrering af pant. Tryk Opdater pant for at se din registrerede pant.";
 
 }
@@ -131,7 +144,7 @@ while (pantListParsed.value)
 
  */
 
-
+//KR: HER SKAL DER I STEDET STÅ "INTET AT REGISTRE" ELLER NOGET I DEN DUR
   function panthistorik() {
     document.location.href="Panthistorik.html";
   }
