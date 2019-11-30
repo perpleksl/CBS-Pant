@@ -11,7 +11,7 @@
     <h2>Velgørenhed</h2>
     <fieldset>
         <legend>Donation amount (kr.)</legend>
-        <input type="text" name="amount" value="10.00" readonly/>
+        <input type="text" id="amount" name="amount" value="10.00" readonly/>
     </fieldset>
     <fieldset>
         <legend>Hvem vil du donere til?</legend>
@@ -25,20 +25,13 @@
         Vælg velgørenhedsorganisation Sea Turtle Conservancy<br>
         <p id="text2" style="display:none">Tak for din donation til Sea Turtle Conservancy. Dine penge går til at redde verden.</p>
     </fieldset>
-    <input type="button" id="calc-btn" value="Doner" onClick="if(confirm('Er du sikker på, at du vil donere til de valgte organisationer?'))
-alert('Tak for din donation!');
-else alert('Foretag ændringer og prøv igen')">
+    <input type="button" id="calc-btn" value="Doner" onclick="calculate()">
     <div class="result-display"> Donation til de valgte organisationer: <span id="result">0</span> kr.</div>
 </form>
 
 <script
-    src="Velgørenhed.js">
+        src="Velgørenhed.js">
 </script>
-
-
-
-
-
 
 </body>
 </html>

@@ -71,3 +71,13 @@ function udregnPant() {
 
 
 }
+
+function passvalues()
+{
+var sum=document.getElementById("amount").value;
+localStorage.setItem("sumAfPantB",sum);
+return false;
+}
+
+
+
