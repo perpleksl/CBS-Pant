@@ -10,5 +10,5 @@ function showAmount() {
             sum += totalPantKr;
         }
     }
-    alert('Amount:' + (sum/10));
+    alert('Dine optjente bonuspenge til Nexus i kr:' +  (sum/10));
 }
